@@ -1,0 +1,49 @@
+@import "@styles/vars.scss", "@styles/keyframes.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-montserrat);
+  background-color: $black;
+  color: $white;
+  font-size: 14px;
+  position: relative;
+}
+
+.font-game {
+  font-family: var(--font-press_start_2p) !important;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.external {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 10px;
+  gap: 5px;
+  background: $white;
+  border-radius: 5px;
+  font-weight: 600;
+  color: $green-dark;
+  transition: 0.3s ease-out;
+
+  &:hover {
+    background: $green-light;
+    color: $black;
+  }
+}

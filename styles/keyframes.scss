@@ -1,0 +1,19 @@
+@keyframes cursor-flash {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) scaleY(0);
+  }
+  to {
+    transform: translateY(-50%) scaleY(1);
+    opacity: 1;
+  }
+}
+
+@keyframes typing {
+  0% {
+    clip-path: polygone(0 0, 0 0, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygone(0 0, 0 100%, 100% 100%, 0 100%);
+  }
+}

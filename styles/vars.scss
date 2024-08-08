@@ -1,0 +1,30 @@
+// @import "./keyframes.scss";
+
+/* Color styles */
+$black: rgba(12, 8, 5, 1);
+$white: rgba(255, 255, 255, 1);
+$green-dark: rgba(22, 152, 113, 1);
+$green-light: rgba(56, 248, 110, 1);
+$golden: rgba(239, 211, 111, 1);
+$red: rgba(181, 48, 29, 1);
+$glass-white: rgba(123, 123, 123, 0.5);
+$glass-black: rgba(36, 36, 36, 0.6);
+$glass-black-deep: rgba(0, 0, 0, 0.6);
+$glass-black-dark: rgba(45, 45, 45, 0.9);
+
+/* Effect styles */
+$glass-blur: blur(8px);
+$default-blur: blur(4px);
+$default-shadow: 0 0 20px rgba($black, 0.3);
+$green-glow: 0 0 20px rgba($green-light, 0.9);
+
+/* Clip Paths */
+$clip-rectangle: polygone(0 0, 0 100%, 100% 100%, 0 100%);
+$clip-scaled-down: polygone(0 100%, 100% 100%, 100% 100%, 0 100%);
+
+/* Animations */
+$cursor-flash: cursor-flash 1s ease-in-out alternate-reverse infinite;
+$typing: typing 1s ease-in-out alternate-reverse infinite;
+
+/* Sizing */
+$section-content-width: 650px;
