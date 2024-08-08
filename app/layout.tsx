@@ -3,6 +3,10 @@ import { Montserrat, Press_Start_2P } from "next/font/google";
 import clsx from "clsx";
 import "./global.scss";
 import MainNav from "@/components/MainNav";
+import ToTopFab from "@/components/ToTopFab";
+import Footer from "@/components/Footer";
+import Sidebar from "@/components/Sidebar";
+import PageBG from "@/components/PageBG";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -56,7 +60,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={clsx(pressStart2P.variable, montserrat.variable)}>
         <MainNav />
-        {children}
+        <main className="page-body">
+          <PageBG />
+          <Sidebar />
+          {children}
+        </main>
+        <ToTopFab />
+        <Footer />
       </body>
     </html>
   );
