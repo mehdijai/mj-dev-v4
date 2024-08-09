@@ -5,19 +5,7 @@ import "./style.scss";
 import clsx from "clsx";
 import { useEffect } from "react";
 import gsap from "gsap";
-
-const socialMediaLinks: SMLink[] = [
-  {
-    name: "Github",
-    url: "https://github.com/mehdijai",
-    logo: "/icons/github.svg",
-  },
-  {
-    name: "LinkedIn",
-    url: "https://linkedin.com/mehdijai",
-    logo: "/icons/linkedin.svg",
-  },
-];
+import { socialMediaLinks } from "@/lib/info";
 
 export default function Sidebar() {
   useEffect(() => {
