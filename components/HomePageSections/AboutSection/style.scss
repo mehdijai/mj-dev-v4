@@ -1,14 +1,14 @@
 .about {
   min-height: 100vh;
-  @media screen and (max-width: 425px) {
-    padding-right: 25px;
+  @media screen and (max-width: $screen-sm) {
+    padding-right: $sidebar-left;
   }
   .skills {
     width: $section-content-width;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $screen-sm) {
       gap: 5px;
       width: 90%;
     }
@@ -17,7 +17,7 @@
       background: darken($primary, 10);
       font-weight: 700;
       padding: 5px 8px;
-      font-size: 13px;
+      font-size: 0.9em;
       border-radius: 5px;
       box-shadow: $default-shadow;
       user-select: none;
@@ -25,7 +25,7 @@
       cursor: pointer;
       clip-path: polygon(0 0, 0 0, 0 100%, 0 100%);
 
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: $screen-sm) {
         font-weight: 600;
         font-size: 12px;
       }
