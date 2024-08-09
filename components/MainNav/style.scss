@@ -9,7 +9,7 @@
   width: calc(100% - $sidebar-left);
   margin-left: calc($sidebar-left);
 
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: $screen-sm) {
     width: 100%;
     margin-left: 0;
     padding: $size-10 0;
@@ -18,7 +18,7 @@
   .nav-list {
     padding: 0;
     max-width: 1000px;
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $screen-sm) {
       max-width: unset;
       width: 100%;
       margin: 0;
@@ -39,15 +39,16 @@
 
     li {
       opacity: 1;
+      user-select: none;
       &:not(.logo, .menu-toggler) {
-        @media screen and (max-width: 425px) {
+        @media screen and (max-width: $screen-sm) {
           display: none;
         }
       }
     }
     .menu-toggler {
       display: none;
-      @media screen and (max-width: 425px) {
+      @media screen and (max-width: $screen-sm) {
         display: block;
       }
       button {

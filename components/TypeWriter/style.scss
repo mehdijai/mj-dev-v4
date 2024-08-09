@@ -9,7 +9,7 @@
   box-sizing: content-box;
   display: flex;
   align-items: flex-end;
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: $screen-sm) {
     font-size: 35px;
   }
   span {

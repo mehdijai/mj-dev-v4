@@ -27,10 +27,20 @@ export default function PageBG() {
     <div className="bg">
       <div className="overlay"></div>
       <div className={clsx("blob", "blob-purple")}>
-        <Image width={1000} height={1000} alt="blob" src="/blob-purple.svg" />
+        <Image
+          width={100}
+          height={100}
+          alt="blob"
+          src="/assets/blob-purple.svg"
+        />
       </div>
       <div className={clsx("blob", "blob-orange")}>
-        <Image width={1000} height={1000} alt="blob" src="/blob-orange.svg" />
+        <Image
+          width={100}
+          height={100}
+          alt="blob"
+          src="/assets/blob-orange.svg"
+        />
       </div>
     </div>
   );

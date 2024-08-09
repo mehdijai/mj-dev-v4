@@ -15,7 +15,7 @@ body {
   background-color: $black;
   color: $white;
   font-size: 14px;
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: $screen-sm) {
     font-size: 16px;
   }
   position: relative;
@@ -39,13 +39,13 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: $size-5 $size-10;
+  padding: $size-5 $size-10 !important;
   gap: $size-5;
   background: $white;
   cursor: pointer;
   border-radius: $size-5;
   font-weight: 600;
-  color: $primary;
+  color: $primary !important;
   transition: 0.3s ease-out;
 
   &:hover {
@@ -57,7 +57,7 @@ a {
 .page-body {
   min-height: 100vh;
   padding-left: calc($sidebar-left * 2);
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: $screen-sm) {
     padding-left: $sidebar-left;
   }
 }

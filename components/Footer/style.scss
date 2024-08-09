@@ -9,11 +9,12 @@
   left: 0;
   width: 100%;
   overflow: hidden;
+  user-select: none;
   p {
     margin: 0 auto;
     text-align: center;
     width: max-content;
-    @media screen and (max-width: 425px) {
+    @media screen and (max-width: $screen-sm) {
       font-size: 12px;
     }
   }

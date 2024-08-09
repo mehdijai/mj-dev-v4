@@ -9,10 +9,11 @@
   justify-content: space-between;
   padding: 0 10px;
   z-index: 90;
-  @media screen and (max-width: 425px) {
+  @media screen and (max-width: $screen-sm) {
     display: none;
   }
   .sm-icon {
+    user-select: none;
     &:nth-of-type(2) {
       margin-top: 20px;
     }
@@ -22,7 +23,7 @@
     margin: 5px 0;
     transition: 0.3s ease-out;
     position: relative;
-    width: 2em;
+    width: 1.6em;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -44,7 +45,7 @@
     &:hover {
       &::after {
         right: -10px;
-        background-color: $white;
+        background-color: $golden;
       }
       transform: translateX(-5px);
     }
