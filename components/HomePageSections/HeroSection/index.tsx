@@ -36,7 +36,7 @@ export default function HeroSection() {
           width={1000}
           height={1000}
           className="bg-img"
-          src="/bg.jpeg"
+          src="/assets/bg.jpeg"
         />
       </div>
       <TypeWriter />
