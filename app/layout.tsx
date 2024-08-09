@@ -61,11 +61,11 @@ export default function RootLayout({
       <body className={clsx(pressStart2P.variable, montserrat.variable)}>
         <MainNav />
         <main className="page-body">
-          <PageBG />
+          {/* <PageBG /> */}
           <Sidebar />
           {children}
         </main>
-        <ToTopFab />
+        {/* <ToTopFab /> */}
         <Footer />
       </body>
     </html>

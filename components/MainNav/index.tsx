@@ -1,11 +1,13 @@
 "use client";
 
 import Link from "next/link";
-import style from "./style.module.scss";
+import "./style.scss";
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import clsx from "clsx";
 import { Menu } from "lucide-react";
+import NavLink from "./NavLink";
+import { gsap } from "gsap";
 
 const navLinks = [
   {
@@ -23,7 +25,12 @@ const navLinks = [
   },
   {
     name: "Blog",
-    url: "https://hashnode.mehdijai.dev",
+    url: "https://mehdijai.hashnode.dev",
+    external: true,
+  },
+  {
+    name: "Resume",
+    url: "/_resume.pdf",
     external: true,
   },
 ];
@@ -31,32 +38,44 @@ const navLinks = [
 export default function MainNav() {
   const [openNavMenu, setOpenNavMenu] = useState(false);
 
+  useEffect(() => {
+    const tl = gsap.timeline({
+      defaults: { duration: 0.5, ease: "power4.inOut" },
+    });
+    tl.to(".main-nav", {
+      opacity: 1,
+    }).fromTo(
+      ".nav-list > li",
+      {
+        y: -5,
+        opacity: 0,
+        stagger: 0.1,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        stagger: 0.1,
+      },
+      "-=0.3"
+    );
+  });
+
   return (
     <>
-      <nav className={style["main-nav"]}>
-        <ul className={style["nav-list"]}>
-          <li className={style["logo"]}>
+      <nav className={"main-nav"}>
+        <ul className={"nav-list"}>
+          <li className={"logo"}>
             <Link href="/">
-              <Image width={30} height={30} src="/logo.svg" alt="MJDev" />
+              <Image width={30} height={30} src="/logo/logo.svg" alt="MJDev" />
             </Link>
           </li>
           {navLinks.map((link) => (
             <li key={link.url}>
-              <Link
-                className={clsx(
-                  style["nav-link"],
-                  link.external && "external",
-                  link.external && style["external"]
-                )}
-                href={link.url}
-                target={link.external ? "_blank" : undefined}
-              >
-                {link.name}
-              </Link>
+              <NavLink link={link} />
             </li>
           ))}
           <li
-            className={clsx(style["menu-toggler"], { closed: !openNavMenu })}
+            className={clsx("menu-toggler", { closed: !openNavMenu })}
             onClick={() => setOpenNavMenu(!openNavMenu)}
           >
             <button className="external">
@@ -66,20 +85,10 @@ export default function MainNav() {
         </ul>
       </nav>
       {openNavMenu && (
-        <ul className={style["list-menu"]}>
+        <ul className={"list-menu"}>
           {navLinks.map((link) => (
             <li key={link.url}>
-              <Link
-                className={clsx(
-                  style["nav-link"],
-                  link.external && "external",
-                  link.external && style["external"]
-                )}
-                href={link.url}
-                target={link.external ? "_blank" : undefined}
-              >
-                {link.name}
-              </Link>
+              <NavLink link={link} />
             </li>
           ))}
         </ul>
